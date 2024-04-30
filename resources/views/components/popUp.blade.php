@@ -20,7 +20,6 @@
             <option value="Work">Work</option>
             <option value="School">School</option>
         </select><br>
-        <!-- <button class="addCategory" onclick="addCategory">+</button> -->
     </div>
     <div>
         <label for="startTime">Start Time:</label><br>
@@ -29,7 +28,6 @@
         <label for="endTime">End Time:</label><br>
         <input type="time" id="endTime" name="endTime" required><br>
     </div> 
-    <button type="submit" onclick="addEvent()">add</button>
+    <button type="submit">add</button>
 </form>
 
-<!-- <script src="{{ asset('js/interactiveCalendar.js') }}"></script> -->

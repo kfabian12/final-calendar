@@ -11,11 +11,7 @@ class Event extends Model
 
     use HasFactory;
 
-    // protected $fillable = 
-
-    protected $guarded = [];
-
-    protected $with = [
+    protected $fillable = [
         'eventName',
         'day',
         'notes',
@@ -23,12 +19,4 @@ class Event extends Model
         'startTime',
         'endTime'
     ]; 
-
-    public function scopeFilter($query, array $filters) {
-
-        $query->when($filters['categories'] ?? false, fn($query, $categories) =>
-            $query->whereHas('categories'), fn ($query) =>
-                $query->where('slug', $categories)
-        );
-    }
 }

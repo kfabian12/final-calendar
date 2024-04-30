@@ -36,25 +36,4 @@ class EventsController extends Controller
         return back()->with('success', 'Event Deleted');
     }
  
-    // public function __invoke()
-    // {
-    //     // $allEvents = [];
- 
-    //     // $events = ;;
- 
-    //     // foreach ($events as $event) {
-    //     //     $allEvents[] = [
-    //     //         'title' => $event->eventName,
-    //     //         'start' => $event->day,
-    //     //         'startTime' => $event->startTime,
-    //     //         'endTime' => $event->endTime,
-    //     //     ];
-    //     // }
-
-    //     // $users = DB::table('users')->get()->
- 
-    //     return view('calendar', [
-    //         'events' => Event::all()->toJson()
-    //     ]);
-    // }
 }

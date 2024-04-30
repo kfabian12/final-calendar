@@ -20,12 +20,6 @@ Route::get('/calendar', function () {
     ]);
 });
 
-// Route::get('/calendar/{day}', function (Day $day) {
-//     return view('dayView', [
-//         'event' => Event::where('day', $day)
-//     ]);
-// });
-
 Route::get('/toDo', function () {
     return view('toDo', [
         'tasks' => Task::all()
@@ -45,14 +39,10 @@ Route::get('/login', function () {
 Route::get('/signUp', function () {
     return view('register.signUp'); 
 }); 
-
-// Route::get('/calendar', [EventsController::class, 'index']);
  
 Route::get('addEvent', [EventsController::class, 'create']);
 Route::post('addEvent', [EventsController::class, 'store']);
 Route::delete('events/{event}', [EventsController::class, 'destroy']);
-
-// Route::get('/calendar', [EventsController::class, '__invoke']);
 
 Route::get('addItem', [ItemsController::class, 'create']);
 Route::post('addItem', [ItemsController::class, 'store']);
