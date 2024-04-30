@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    background-color: white;
+    color: #444;
+    text-align: left;
+    padding: 20px;
+}
+
+i {
+    color: #444;
+    background-color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+a {
+    background-color: white;
+    text-decoration: none;
+    color: #444;
+    padding: 0 8px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(80, 182, 171);
+}

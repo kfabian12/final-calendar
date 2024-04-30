@@ -1,0 +1,76 @@
+* {
+    background: rgb(190, 189, 189);
+    text-align: center;
+} 
+
+.back {
+    background-color: white;
+    border: solid 2px black;
+    float: left;
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.back:hover {
+    background-color: rgb(173, 180, 237);
+}
+
+form { 
+    background: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 200px auto;
+    padding: 100px 150px 120px 150px;
+    text-align: left;
+}
+
+h1 {
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+div {
+    background: white;
+    text-align: left;
+}
+
+input, label {
+    background-color: white;
+    font-size: 20px;
+}
+
+input {
+    font-family: 'Times New Roman', Times, serif;
+    width: 500px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.errorList {
+    background-color: white;
+    color: red;
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+button {
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+.submit:hover {
+    background-color: rgb(173, 180, 237);
+}
+
+

@@ -1,0 +1,77 @@
+body {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    font-family: 'DM Serif Display', serif;
+}
+
+.home {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    border-radius: 100%;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+i {
+    color: #444; 
+    margin: 45px;
+    padding: 0 10px 0 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-right: 30px;
+    margin-bottom: 100px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1.5px;
+    font-size: 60px;
+}
+
+a:hover {
+    color: rgb(136, 234, 225);
+}
+
+.loginSignup, .loginSignup a {
+    color: white;
+    font-size: 30px;
+    display: inline-flex;
+    text-decoration: none;
+    margin: auto;
+}
+
+.loginSignup a:hover {
+    color: rgb(136, 234, 225);
+}
+
+.homeAuth {
+    margin: 50px 0;
+    font-size: 25px;
+}
+
+.homeAuth button {
+    font-family: 'DM Serif Display', serif;
+    background-color: #444;
+    color: white;
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 25px;
+}
+
+.homeAuth button:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+.homeAuth form {
+    margin-top: 8px;
+}

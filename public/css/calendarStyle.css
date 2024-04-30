@@ -1,0 +1,413 @@
+body {
+    background-color: #444;
+    color: white; 
+    font-family: 'DM Serif Display', serif;
+    margin: 0px;
+}
+
+/* header & sidebar*/
+.sidebar { 
+    height: 100%; 
+    width: 0; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white; 
+    color: #444;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 12px;
+}
+  
+.sidebar a {
+    padding: 15px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: rgb(136, 234, 225);;
+}
+  
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.openEventbtn {
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    border: none;
+}
+  
+.openEventbtn:hover {
+    color: rgb(136, 234, 225);
+    background-color: #444;
+}
+  
+.openClose {
+    transition: margin-left .4s;
+    padding: 20px;
+}
+
+.addEventBtn {
+    border-radius: 100%;
+    color: #444;
+    background-color: white;
+    border: none;
+    font-size: 30px;
+    padding: 0 25px 0 25px;
+    margin: 47px 50px 0 0;
+} 
+
+.addEventBtn:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+
+
+/* calendar table */
+.container-calendar {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-column-gap: 15px;
+    margin-top: 40px;
+}
+
+#main {
+    transition: 0.3s;
+}
+
+/* month year header */
+.monthYear {
+    text-align: center;
+    border: 1px solid white;
+    height: 200px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthAndYear {
+    font-size: 80px;
+}
+
+.monthYear button {
+    background-color: #444;
+    color: white;
+    margin: 0 15px 0 15px;
+    border: none;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.monthYear button:hover {
+    color: rgb(136, 234, 225);
+    background-color: #6d6d6d;
+    border-radius: 30px;
+    padding-bottom: 5px;
+}
+
+h1 {
+    padding-bottom: 8px;
+}
+
+/* days of week & days on calendar */
+table {
+    margin: auto;
+}
+
+thead tr {
+    height: 75px;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 0;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+td {
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 20px 160px 160px 20px;
+    height: 80px;
+}
+
+tbody td:hover {
+    background-color: #6d6d6d;
+}
+
+tfoot {
+    font-size: xx-large;
+}
+
+tfoot td {
+    padding: 50px 0 50px 50px;
+}
+
+select {
+    color: #444;
+    font-family: 'DM Serif Display', serif;
+    font-size: medium;
+    border-color: #444;
+    margin-right: 5px;
+}
+
+
+
+/* addEvent Popup */
+.addEvent {
+    display: flex;
+    justify-content: center;
+}
+ 
+.addEvent .popup-content {
+    visibility: hidden;
+    width: 40%;
+    /* height: 400px; */
+    background-color: white;
+    color: #444;
+    border-radius: 6px;
+    padding: 30px;
+    position: absolute; 
+    z-index: 3;
+    box-shadow: 9px 9px 15px 15px black;
+}
+
+.addEventForm input{
+    width: 90%;
+}
+
+.closePopup {
+    float: right;
+    font-size: 40px;
+    background-color: white;
+    border: none;
+    color: #444;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.closePopup:hover {
+    background-color: white;
+    color: rgb(136, 234, 225);
+}
+
+.addEvent .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.addEventForm button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+
+.addEventForm button:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+
+
+/* right sidebar - filters */
+form div {
+    display: inline;
+}
+
+input[type="checkbox"] {
+    accent-color: red;
+}
+
+input[type="checkbox"]::-ms-fill {
+    color: blue;
+}
+
+
+
+/* Popup */
+.dayView {
+    position: relative;
+    display: block;
+}
+
+.dayView .day {
+    visibility: hidden;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    color: #444;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 900px;
+    left: 110px;
+    padding: 50px;
+    box-shadow: 9px 9px 15px 15px black;
+}
+
+.closeDayView {
+    float: right;
+    border: none;
+    font-size: 45px;
+    color: #444;
+    background-color: white;
+}
+
+.day p {
+    padding-left: 15px;
+}
+
+.day button {
+    padding-left: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.close {
+    float: right;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+
+/* event list */
+.eventList-container {
+    margin-top: 100px;
+}
+
+.eventList-container h1 {
+    margin-left: 50px;
+}
+
+.eventList {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.eventListItem {
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 50px 50px 50px;
+}
+
+.eventListItem button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: solid 1px #444;
+    background-color: white;
+    color: #444;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+
+#event-section {
+    padding: 10px;
+    background: #f5f5f5;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+#event-section h3 {
+    color: green;
+    font-size: 18px;
+    margin: 0;
+}
+ 
+#addEvent input,  #addEvent select{
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 80%;
+}
+ 
+.event-marker {
+    position: relative;
+}
+ 
+.event-marker::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+ 
+/* event tooltip styling */
+.event-tooltip {
+    position: absolute;
+    background-color: rgba(234, 232, 232, 0.763);
+    color: black;
+    padding: 10px;
+    border-radius: 4px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+ 
+.event-marker:hover .event-tooltip {
+    display: block;
+}
+
+
+
+
+
+

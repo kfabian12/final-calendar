@@ -1,0 +1,74 @@
+body {
+    background-color: #444;
+    color: white; 
+    font-family: 'DM Serif Display', serif;
+} 
+
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: 100px 0 50px 0;
+}
+ 
+/* list */
+.list {
+    margin: auto;
+    width: 40%;
+}
+ 
+.listItem {
+    border: 2px solid rgb(218, 217, 217);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 25px;
+    font-size: 20px;
+    background-color: #444;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    font-size: medium;
+    padding-top: 0;
+    margin-top: 5px;
+}
+
+input { 
+    background-color: #444;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    margin: 15px 0;
+    width: 625px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: solid 1px #444;
+    background-color: white;
+    color: #444;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+button:hover {
+    background-color: rgb(136, 234, 225);
+}
+
+.listItem i::before {
+    background-color: #444;
+}
+
+.listItem i {
+    float: right;
+    color: #888888;
+    margin-top: 30px;
+}
+
